@@ -36,6 +36,8 @@
             android:name=".CleaningList_UI" />
         <activity
             android:name=".CleaningAdd_UI" />
+        <activity
+            android:name=".CalendarActivity" />
 
 
     </application>

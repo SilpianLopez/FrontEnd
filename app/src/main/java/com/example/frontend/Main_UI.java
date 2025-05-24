@@ -34,9 +34,22 @@ public class Main_UI extends AppCompatActivity {
         addTodoItem("청소 항목3");
         addTodoItem("청소 항목4");
 
+        LinearLayout navCalendar = findViewById(R.id.navCalendar);
+        LinearLayout navHome = findViewById(R.id.navHome);
+
+
         findViewById(R.id.btnAddSpace).setOnClickListener(v -> {
             Intent intent = new Intent(Main_UI.this, SpaceListActivity.class);
             startActivity(intent);
+        });
+
+        navCalendar.setOnClickListener(v -> {
+            Intent intent = new Intent(Main_UI.this, CalendarActivity.class);
+            startActivity(intent);
+        });
+
+        navHome.setOnClickListener(v -> {
+
         });
 
 
