@@ -36,6 +36,7 @@ public class SpaceListActivity extends AppCompatActivity {
         ImageView btnAddSpace = findViewById(R.id.btnAddSpace);
         btnAddSpace.setOnClickListener(v -> {
             Intent intent = new Intent(SpaceListActivity.this, SpaceAddActivity.class);
+            startActivityForResult(intent, 101);
         });
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
