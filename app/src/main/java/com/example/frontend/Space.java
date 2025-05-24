@@ -1,5 +1,4 @@
-// models/Space.java
-package com.example.frontend.models;
+package com.example.frontend;
 
 public class Space {
     private String name;
@@ -12,9 +11,6 @@ public class Space {
         this.furniture = furniture;
     }
 
-    // 기본 생성자 (서버 응답 처리용)
-    public Space() {}
-
     public String getName() {
         return name;
     }
@@ -25,17 +21,5 @@ public class Space {
 
     public String getFurniture() {
         return furniture;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setFurniture(String furniture) {
-        this.furniture = furniture;
     }
 }
