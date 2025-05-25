@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpaceListActivity extends AppCompatActivity {
+
     private List<Space> spaceList;
     private SpaceAdapter adapter;
     private int editingPosition = -1;
@@ -62,7 +63,6 @@ public class SpaceListActivity extends AppCompatActivity {
     }
 
     @Override
-
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 

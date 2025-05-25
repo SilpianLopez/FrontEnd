@@ -47,6 +47,7 @@ public class CalendarActivity extends AppCompatActivity {
 
         LinearLayout navHome = findViewById(R.id.navHome);
         LinearLayout navCalendar = findViewById(R.id.navCalendar);
+        LinearLayout navAi = findViewById(R.id.navAi);
 
         navHome.setOnClickListener(v -> {
             Intent intent = new Intent(CalendarActivity.this, Main_UI.class);
@@ -58,6 +59,11 @@ public class CalendarActivity extends AppCompatActivity {
             // 현재 페이지 → 아무 작업 안함
         });
 
+        navAi.setOnClickListener(v -> {
+            Intent intent = new Intent(CalendarActivity.this, RoutineMainActivity.class);
+            startActivity(intent);
+            finish();  // 현재 액티비티 종료 (원하면)
+        });
 
 
 

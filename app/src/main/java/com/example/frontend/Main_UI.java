@@ -36,6 +36,7 @@ public class Main_UI extends AppCompatActivity {
 
         LinearLayout navCalendar = findViewById(R.id.navCalendar);
         LinearLayout navHome = findViewById(R.id.navHome);
+        LinearLayout navAi = findViewById(R.id.navAi);
 
 
         findViewById(R.id.btnAddSpace).setOnClickListener(v -> {
@@ -50,6 +51,17 @@ public class Main_UI extends AppCompatActivity {
 
         navHome.setOnClickListener(v -> {
 
+        });
+
+        navAi.setOnClickListener(v -> {
+            Intent intent = new Intent(Main_UI.this, RoutineMainActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView btnAlarm = findViewById(R.id.btnAlarm);
+        btnAlarm.setOnClickListener(v -> {
+            Intent intent = new Intent(Main_UI.this, AlarmActivity.class);
+            startActivity(intent);
         });
 
 
