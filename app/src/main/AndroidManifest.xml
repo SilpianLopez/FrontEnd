@@ -38,8 +38,14 @@
             android:name=".CleaningAdd_UI" />
         <activity
             android:name=".CalendarActivity" />
-
-
+        <activity
+            android:name=".AlarmActivity" />
+        <activity
+            android:name=".RoutineMainActivity"/>
+        <activity
+            android:name=".RoutineAllActivity"/>
+        <activity
+            android:name=".RoutineDetailActivity"/>
     </application>
 
 </manifest>
