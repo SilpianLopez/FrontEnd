@@ -15,6 +15,7 @@ public class Main_UI extends AppCompatActivity {
 
     private GridLayout spaceGrid;
     private LinearLayout todoListLayout;
+    ImageView im_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +65,12 @@ public class Main_UI extends AppCompatActivity {
             startActivity(intent);
         });
 
-
+        im_profile = findViewById(R.id.im_profile);
+        // 프로필 아이콘 클릭 시 프로필 화면으로 전환
+        im_profile.setOnClickListener(item -> {
+            Intent intent = new Intent(Main_UI.this, Profile_UI.class);
+            startActivity(intent);
+        });
     }
 
     private void addSpaceCard(String name, int imageResId) {

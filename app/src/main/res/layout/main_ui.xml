@@ -136,7 +136,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
-            <ImageView android:src="@drawable/ic_profile"
+            <ImageView
+                android:id="@+id/im_profile"
+                android:src="@drawable/ic_profile"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
             <TextView android:text="프로필"

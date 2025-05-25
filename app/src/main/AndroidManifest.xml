@@ -46,6 +46,14 @@
             android:name=".RoutineAllActivity"/>
         <activity
             android:name=".RoutineDetailActivity"/>
+        <activity
+            android:name=".Profile_UI" />
+        <activity
+            android:name=".Profile_Edit_UI" />
+        <activity
+            android:name=".Stats_UI" />
+
+
     </application>
 
 </manifest>

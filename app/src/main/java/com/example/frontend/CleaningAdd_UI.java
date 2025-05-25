@@ -2,6 +2,7 @@ package com.example.frontend;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -19,7 +20,7 @@ public class CleaningAdd_UI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cleaning_add_ui);
-
+        // 청소 항목 추가 툴바
         toolbar = findViewById(R.id.toolbar_cadd);
         setSupportActionBar(toolbar);
 
@@ -27,22 +28,21 @@ public class CleaningAdd_UI extends AppCompatActivity {
             getSupportActionBar().setTitle("청소 항목 추가");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);  // <- 버튼 표시
         }
-
+        // 청소 주기 스피너
         spunit = findViewById(R.id.sp_unit);
         spvalue = findViewById(R.id.sp_value);
         // 단위: 매일, 매주, 매달
         String[] unitItems = {"매일", "매주", "매달"};
-        ArrayAdapter<String> unitAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, unitItems);
-        unitAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> unitAdapter = new ArrayAdapter<>(this, R.layout.spinner_item_white, unitItems);
+        unitAdapter.setDropDownViewResource(R.layout.spinner_item_white);
         spunit.setAdapter(unitAdapter);
-
         // 숫자: 1 ~ 10일
         String[] valueitems = new String[10];
         for (int i = 0; i < 10; i++) {
             valueitems[i] = String.valueOf(i + 1);
         }
-        ArrayAdapter<String> valueAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, valueitems);
-        unitAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> valueAdapter = new ArrayAdapter<>(this, R.layout.spinner_item_white, valueitems);
+        unitAdapter.setDropDownViewResource(R.layout.spinner_item_white);
         spvalue.setAdapter(valueAdapter);
 
         // 저장 버튼
