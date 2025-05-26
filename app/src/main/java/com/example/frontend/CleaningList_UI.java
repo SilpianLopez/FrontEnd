@@ -23,7 +23,7 @@ public class CleaningList_UI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cleaning_list_ui);
-
+        // 청소 항목 목록 툴바
         space_name = getIntent().getStringExtra("space_name");
         toolbar = findViewById(R.id.toolbar_clist);
         setSupportActionBar(toolbar);
@@ -52,8 +52,7 @@ public class CleaningList_UI extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
-    // <- 버튼 기능 구현
+    // 툴바 <- 버튼 기능 구현
     @Override
     public boolean onSupportNavigateUp() {
         finish();
