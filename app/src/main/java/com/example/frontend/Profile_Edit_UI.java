@@ -83,7 +83,7 @@ public class Profile_Edit_UI extends AppCompatActivity {
         finish();
         return  true;
     }
-
+    // 이미지 처음 저장 시 'im_user_prfimg'로 저장하고 그 후부터는 덮어쓰게 함
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

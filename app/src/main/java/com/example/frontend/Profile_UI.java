@@ -59,11 +59,17 @@ public class Profile_UI extends AppCompatActivity {
 
         im_calendar = findViewById(R.id.im_calendar);
         // 캘린더 아이콘 클릭 시 캘린더 화면으로 전환
-
+        im_calendar.setOnClickListener(item -> {
+            Intent intent = new Intent(Profile_UI.this, CalendarActivity.class);
+            startActivity(intent);
+        });
 
         im_ai = findViewById(R.id.im_ai);
         // AI 아이콘 클릭 시 AI 화면으로 전환
-
+        im_ai.setOnClickListener(item -> {
+            Intent intent = new Intent(Profile_UI.this, RoutineMainActivity.class);
+            startActivity(intent);
+        });
 
         text_name = findViewById(R.id.text_name);
         text_family = findViewById(R.id.text_family);
