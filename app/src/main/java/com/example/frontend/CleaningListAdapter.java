@@ -68,13 +68,13 @@ public class CleaningListAdapter extends RecyclerView.Adapter<CleaningListAdapte
         holder.cycle.setText("청소 주기: " + item.cycle);
         holder.comment.setText(item.comment);
 
-        // 롱클릭 시 BottomSheet로 강조 및 메뉴 표시
+        // 롱클릭 시 BottomSheet로 강조 및 메뉴 표시(ui만 구현함, 기능은 아직)
         holder.itemView.setOnLongClickListener(v -> {
             holder.rootView.setBackgroundColor(HIGHLIGHT_COLOR);
 
             BottomSheetDialog sheetDialog = new BottomSheetDialog(v.getContext(), R.style.CustomBottomSheetDialog);
             View sheetView = LayoutInflater.from(v.getContext()).inflate(R.layout.bottom_sheet_space, null);
-            sheetView.setBackgroundResource(R.drawable.bottom_sheet_background); // 배경 적용
+            sheetView.setBackgroundResource(R.drawable.bottom_sheet_background);
             sheetDialog.setContentView(sheetView);
 
 

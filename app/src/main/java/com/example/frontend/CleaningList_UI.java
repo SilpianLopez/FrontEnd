@@ -23,7 +23,7 @@ public class CleaningList_UI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cleaning_list_ui);
-        // 청소 항목 목록 툴바
+        // 청소 항목 목록 툴바(Main_UI에서 공간명(space_name)을 전달받아 툴바 타이틀로 사용)
         space_name = getIntent().getStringExtra("space_name");
         toolbar = findViewById(R.id.toolbar_clist);
         setSupportActionBar(toolbar);
@@ -35,7 +35,7 @@ public class CleaningList_UI extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rv_clist);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        // 임의의 데이터 넣음
         List<CleaningList> itemList = new ArrayList<>();
         itemList.add(new CleaningList("창틀 먼지 제거", "2일", "창문 2개의 창틀 먼지 제거"));
         itemList.add(new CleaningList("책상 정리", "3일", "책상 위 물건 정리하고 먼지 제거"));
@@ -44,7 +44,7 @@ public class CleaningList_UI extends AppCompatActivity {
         adapter = new CleaningListAdapter(itemList);
         recyclerView.setAdapter(adapter);
 
-        // 아이콘 클릭 시 청소 항목 추가 화면으로 전환
+        // + 아이콘 클릭 시 청소 항목 추가 화면으로 전환
         cadd = findViewById(R.id.im_cadd);
 
         cadd.setOnClickListener(item -> {

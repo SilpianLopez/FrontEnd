@@ -45,7 +45,7 @@ public class CleaningAdd_UI extends AppCompatActivity {
         unitAdapter.setDropDownViewResource(R.layout.spinner_item_white);
         spvalue.setAdapter(valueAdapter);
 
-        // 저장 버튼
+        // 저장 버튼('저장 완료' 메시지만 뜨게 함)
         btnsave = findViewById(R.id.btn_save);
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
