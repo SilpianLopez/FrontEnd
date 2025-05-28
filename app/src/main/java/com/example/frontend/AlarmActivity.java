@@ -28,6 +28,7 @@ public class AlarmActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         btnSaveAlarm = findViewById(R.id.btnSaveAlarm);
 
+        // TODO: 백엔드 연동 전 테스트용 더미 데이터 (연동 시 삭제 예정)
         List<AlarmRoom> roomList = new ArrayList<>();
         List<AlarmTask> taskList1 = new ArrayList<>();
         taskList1.add(new AlarmTask("청소 항목1", "알람시간1", true));
@@ -37,8 +38,8 @@ public class AlarmActivity extends AppCompatActivity {
 
         List<AlarmTask> taskList2 = new ArrayList<>();
         roomList.add(new AlarmRoom("화장실", taskList2));
-
-        adapter = new AlarmAdapter(this, roomList);
+        //TODO: 끝
+        adapter = new AlarmAdapter(this, roomList);// TODO: 위 더미 데이터 제거 시 adapter 초기화도 백엔드 데이터로 대체 필요
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
